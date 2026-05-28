@@ -1,4 +1,3 @@
-# Project-POO
+# Sistema de Adoção de animais
 
-Projetos POO 2026.1
- pega a visão 
+Sistema para gerenciamento de adoções
