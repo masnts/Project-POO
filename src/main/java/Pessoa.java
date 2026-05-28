@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Pessoa {
     private String cpf;
     private String nome;
@@ -46,13 +48,16 @@ public class Pessoa {
                 "\nEndereço: "+this.endereco+
                 "\nTelefone: "+this.telefone;
     }
-
-   /* @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Pessoa pessoa = (Pessoa) obj;
-        return cpf.equals(pessoa.cpf);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(cpf, pessoa.cpf);
     }
-    */
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(cpf);
+    }
 }

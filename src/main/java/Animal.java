@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Animal {
     private Especie especie;
     private Sexo sexo;
@@ -6,8 +8,9 @@ public class Animal {
     private String nome;
     private String nascimento;
     private String raca;
+    private boolean adotado;
 
-    public Animal(String nome, Sexo sexo, int codigo, Especie especie, String nascimento, boolean castrado, String raca){
+    public Animal(String nome, Sexo sexo, int codigo, Especie especie, String nascimento, boolean castrado, String raca, boolean adotado) {
         this.nome=nome;
         this.sexo=sexo;
         this.codigo=codigo;
@@ -15,10 +18,11 @@ public class Animal {
         this.castrado=castrado;
         this.nascimento=nascimento;
         this.raca=raca;
+        this.adotado=adotado;
     }
 
     public Animal(){
-        this("Sem nome",Sexo.NAOEXISTE,000,Especie.NAOEXISTE,"00/00/0000",false,"não tem");
+        this("Sem nome",Sexo.NAOEXISTE,000,Especie.NAOEXISTE,"00/00/0000",false,"não tem",false);
     }
 
 
@@ -54,6 +58,9 @@ public class Animal {
     public String getNascimento() {
         return nascimento;
     }
+    public boolean isAdotado() {
+        return adotado;
+    }
 
     //metódos sets
 
@@ -78,16 +85,34 @@ public class Animal {
     public void setCodigo(int codigo){
         this.codigo=codigo;
     }
+    public void setAdotado(boolean adotado){
+        this.adotado=adotado;
+    }
 
     //toString
     @Override
     public String toString(){
         return "Animal:"+
-                this.especie+"\n, Nome: "+this.nome+", código: "+this.codigo+
+                this.especie+"\nNome: "+this.nome+
+                "\nCódigo: "+this.codigo+
                 "\nRaça: "+this.raca+
                 "\nSexo: "+this.sexo+
                 "\nData de nascimento: "+this.nascimento+
-                "\nCastrado: "+this.castrado;
+                "\nCastrado: "+this.castrado+
+                "\nAdotado: "+this.adotado+"\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Objects.equals(codigo, animal.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(codigo);
     }
 }
 
