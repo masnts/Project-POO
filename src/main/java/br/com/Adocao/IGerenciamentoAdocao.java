@@ -1,10 +1,10 @@
-import execoes.PessoaNaoEsxisteException;
+package br.com.Adocao;
 
-import java.util.List;
+import br.com.Adocao.execoes.PessoaNaoEsxisteException;
 
 public interface IGerenciamentoAdocao {
     void cadastrarAnimal(Animal animalNovo);
-    void cadastrarPessoa(Pessoa  pessoaNova);
+    void cadastrarPessoa(Pessoa pessoaNova);
     void realizarAdocao(Pessoa pessoa, Animal animal, String data, int codigo);
 
     Animal consultarAnimal(int codigoAnimal);

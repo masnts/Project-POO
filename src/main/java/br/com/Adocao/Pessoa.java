@@ -1,3 +1,5 @@
+package br.com.Adocao;
+
 import java.util.Objects;
 
 public class Pessoa {
@@ -44,7 +46,7 @@ public class Pessoa {
 
     @Override
     public String toString(){
-        return "Pessoa: "+this.nome+ ", do cpf: "+this.cpf+
+        return "br.com.Adocao.Pessoa: "+this.nome+ ", do cpf: "+this.cpf+
                 "\nEndereço: "+this.endereco+
                 "\nTelefone: "+this.telefone;
     }

@@ -1,3 +1,5 @@
+package br.com.Adocao;
+
 import java.util.Objects;
 
 public class Adocao {
@@ -56,8 +58,8 @@ public class Adocao {
 
     public String toString(){
         return"Adoção: "+
-                "\nAnimal adotado: "+this.animalAdotado.getNome()+
-                "\nPessoa que adotou: "+this.adotante.getNome()+", do cpf: "+this.adotante.getCpf()+
+                "\nbr.com.Adocao.Animal adotado: "+this.animalAdotado.getNome()+
+                "\nbr.com.Adocao.Pessoa que adotou: "+this.adotante.getNome()+", do cpf: "+this.adotante.getCpf()+
                 "\nData de adoção: "+this.dataDeAdocao;
 
     }

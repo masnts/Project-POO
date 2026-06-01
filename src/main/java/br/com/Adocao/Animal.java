@@ -1,3 +1,5 @@
+package br.com.Adocao;
+
 import java.util.Objects;
 
 public class Animal {
@@ -92,7 +94,7 @@ public class Animal {
     //toString
     @Override
     public String toString(){
-        return "Animal:"+
+        return "br.com.Adocao.Animal:"+
                 this.especie+"\nNome: "+this.nome+
                 "\nCódigo: "+this.codigo+
                 "\nRaça: "+this.raca+

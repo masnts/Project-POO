@@ -1,11 +1,13 @@
-import execoes.PessoaNaoEsxisteException;
+package br.com.Adocao;
+
+import br.com.Adocao.execoes.PessoaNaoEsxisteException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 
-public class GerenciamentoAdocao implements IGerenciamentoAdocao{
+public class GerenciamentoAdocao implements IGerenciamentoAdocao {
     private List<Animal> animais = new ArrayList<>();
     private List<Pessoa> pessoas = new ArrayList<>();
     private List<Adocao> adocoes  = new ArrayList<>();
@@ -106,7 +108,7 @@ public class GerenciamentoAdocao implements IGerenciamentoAdocao{
         for(Adocao a : adocoes){
             sb.append("Código: ").append(a.getCodAdocao())
                     .append(" | Adotante: ").append(a.getAdotante().getNome())
-                    .append(" | Animal: ").append(a.getAnimalAdotado().getNome())
+                    .append(" | br.com.Adocao.Animal: ").append(a.getAnimalAdotado().getNome())
                     .append(" | Data: ").append(a.getDataDeAdocao())
                     .append("\n");
 
